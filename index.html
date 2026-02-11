@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubo de Rubik 3D - Emulador</title>
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MAGIK CUBE</h1>
+        <p class="subtitle">Emulador 3D Interactivo</p>
+        
+        <div class="cube-container" id="cubeContainer">
+            <div class="cube" id="cube">
+                <!-- Front face (Blanco) -->
+                <div class="face front" data-face="front"></div>
+                <!-- Back face (Amarillo) -->
+                <div class="face back" data-face="back"></div>
+                <!-- Right face (Rojo) -->
+                <div class="face right" data-face="right"></div>
+                <!-- Left face (Naranja) -->
+                <div class="face left" data-face="left"></div>
+                <!-- Top face (Azul) -->
+                <div class="face top" data-face="top"></div>
+                <!-- Bottom face (Verde) -->
+                <div class="face bottom" data-face="bottom"></div>
+            </div>
+        </div>
+        
+        <div class="scramble-counter">
+            <span id="moveCounter">Movimientos: 0</span>
+        </div>
+        
+        <div class="controls">
+            <button onclick="rotateFace('front', 1)"><span>F</span></button>
+            <button onclick="rotateFace('front', -1)"><span>F'</span></button>
+            <button onclick="rotateFace('back', 1)"><span>B</span></button>
+            <button onclick="rotateFace('back', -1)"><span>B'</span></button>
+            <button onclick="rotateFace('right', 1)"><span>R</span></button>
+            <button onclick="rotateFace('right', -1)"><span>R'</span></button>
+            <button onclick="rotateFace('left', 1)"><span>L</span></button>
+            <button onclick="rotateFace('left', -1)"><span>L'</span></button>
+            <button onclick="rotateFace('top', 1)"><span>U</span></button>
+            <button onclick="rotateFace('top', -1)"><span>U'</span></button>
+            <button onclick="rotateFace('bottom', 1)"><span>D</span></button>
+            <button onclick="rotateFace('bottom', -1)"><span>D'</span></button>
+            <button class="reset-btn" onclick="scrambleCube()"><span>🎲 Mezclar</span></button>
+            <button class="reset-btn" onclick="resetCube()"><span>↻ Reiniciar</span></button>
+        </div>
+        
+        <div class="info">
+            <strong>CONTROLES:</strong> F/B (Frontal/Trasera) · R/L (Derecha/Izquierda) · U/D (Arriba/Abajo)<br>
+            <strong>PRIMA ('):</strong> Rotación antihoraria · Arrastra el cubo para rotarlo
+        </div>
+    </div>
+    <script src="Script.js/script.js"></script>
+</body>
+</html>
